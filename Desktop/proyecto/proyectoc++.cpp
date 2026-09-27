@@ -1,7 +1,7 @@
 #include <iostream>
-#include <stdlib.h> // Para rand() y srand()
-#include <time.h>   // Para clock() y time()
-#include <iomanip> // Para mostrar el resultado del tiempo en segundos y no en notacion cientifica
+#include <stdlib.h> // Libreria para rand() y srand()
+#include <time.h>   // Libreria para clock() y time()
+#include <iomanip> // Libreria para mostrar el resultado del tiempo en segundos y no en notacion cientifica
 using namespace std;
 
 //Declaracion de funciones
@@ -162,18 +162,18 @@ void ordenarSeleccion(int arr[], int tamano){
     }
     clock_t fin=clock();
     double tiempoSegundos=(double)(fin-inicio)/ CLOCKS_PER_SEC;
-    cout<<fixed<<setprecision(6);
+    cout<<fixed<<setprecision(6); //Esta linea permite mostrar el resultado del tiempo en segundos
     
     //Reporte de estadisticas
     cout<<"\n===================================================\n";
     cout<<"             ESTADISTICAS DE RENDIMIENTO             \n";
     cout<<"\n===================================================\n";
     cout<<"Algoritmo:                                  Seleccion\n";
-    cout<<"Elementos:           "<<tamano<<"\n";
-    cout<<"Pasadas:           "<<pasadas<<"\n";
-    cout<<"Comparaciones:           "<<comparaciones<<"\n";
-    cout<<"intercambios:           "<<intercambios<<"\n";
-    cout<<"Tiempo:           "<<tiempoSegundos<<"\n";
+    cout<<"Elementos:     "<<tamano<<"\n";
+    cout<<"Pasadas:       "<<pasadas<<"\n";
+    cout<<"Comparaciones: "<<comparaciones<<"\n";
+    cout<<"intercambios:  "<<intercambios<<"\n";
+    cout<<"Tiempo:        "<<tiempoSegundos<<"s\n";
     cout<<"\n===================================================\n";
 
 }
