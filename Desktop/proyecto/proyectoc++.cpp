@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stdlib.h> // Para rand() y srand()
 #include <time.h>   // Para clock() y time()
+#include <iomanip> // Para mostrar el resultado del tiempo en segundos y no en notacion decimal
 using namespace std;
 
 //Declaracion de funciones
@@ -161,6 +162,7 @@ void ordenarSeleccion(int arr[], int tamano){
     }
     clock_t fin=clock();
     double tiempoSegundos=(double)(fin-inicio)/ CLOCKS_PER_SEC;
+    cout<<fixed<<setprecision(6);
     
     //Reporte de estadisticas
     cout<<"\n===================================================\n";
