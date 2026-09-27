@@ -1,7 +1,7 @@
 #include <iostream>
 #include <stdlib.h> // Para rand() y srand()
 #include <time.h>   // Para clock() y time()
-#include <iomanip> // Para mostrar el resultado del tiempo en segundos y no en notacion decimal
+#include <iomanip> // Para mostrar el resultado del tiempo en segundos y no en notacion cientifica
 using namespace std;
 
 //Declaracion de funciones
@@ -147,7 +147,7 @@ void ordenarSeleccion(int arr[], int tamano){
         pasadas++;
         int min_idx=i;
         
-        for (int j=0;j<tamano-1;j++){
+        for (int j=i+1;j<tamano;j++){
         comparaciones++;
         if(arr[j]<arr[min_idx]){
             min_idx=j;
